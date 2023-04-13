@@ -18,8 +18,6 @@ while True:
         else:
             card = "보"
 
-        
-
         if(user=="바위" and card=="바위"):
             draw += 1
         elif(user=="바위"and card=="가위"):
