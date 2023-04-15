@@ -1,10 +1,11 @@
 import random
 textList = ["가위","바위","보"]
-i = 0
+count = 0
 #승,패,무승부 설정.
 win = 0
 lose = 0
 draw = 0
+
 while True:
     user = input("가위 바위 보 중 하나를 입력하세요 : ")
     if(user in textList):
@@ -20,37 +21,48 @@ while True:
 
         if(user=="바위" and card=="바위"):
             draw += 1
+            print("비겼습니다!")
         elif(user=="바위"and card=="가위"):
             win += 1
+            print("이겼습니다!")
         elif(user=="바위" and card=="보"):
             lose += 1
+            print("졌습니다!")
         elif(user=="가위" and card=="바위"):
             win += 1
+            print("이겼습니다!")
         elif(user=="가위" and card=="가위"):
             draw += 1
+            print("비겼습니다!")
         elif(user=="가위" and card=="보"):
             lose += 1
+            print("졌습니다!")
         elif(user=="보" and card=="바위"):
             win += 1
+            print("이겼습니다!")
         elif(user=="보" and card=="가위"):
             lose += 1
+            print("졌습니다!")
         elif(user=="보" and card=="보"):
             draw += 1
+            print("비겼습니다!")
 
-    else:
-        user = input("정확히 입력했는지 확인해 주세요 : ")
-        i -= 1
+        count += 1
+        #반복문의 끝
 
-    if(i==4):
+        
+    elif(user == '0'):
         print("게임을 종료합니다")
         print('''
         시행횟수 : {0}
         승 : {1}
         패 : {2}
         무승부 : {3}
-        '''.format(i+1, win, lose, draw))
+        '''.format(count, win, lose, draw))
         break
-
-    i+=1
+    else:
+         print("정확히 입력했는지 확인해 주세요")
+                
+    
     
 

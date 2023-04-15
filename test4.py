@@ -16,7 +16,7 @@ disease = {
 patientList = {}
 #5번 반복
 i = 0
-while (len(patientList) < 3):
+while (len(patientList) < 5):
     name = input("\n환자의 이름을 입력하세요 : ")
     code = input("환자의 질병 코드를 입력하세요 : ")
     patientList['patient{0}'.format(i)] = {'name' : name, 'code':code}
@@ -45,6 +45,7 @@ while True:
                 print("환자이름 : ", key_name)
                 print("질병코드 : ", key_code)
                 print("질병명 : ", key_disease)   
+
         break
     else:
         print("이름을 다시 확인 해 주세요")
@@ -62,7 +63,7 @@ while True:
                     key_name = key['name']
                     print("\n환자이름 : ", key_name)
                     print("질병코드 : ", key_code)
-                    print("질병명", disease[search_code])
+                    print("질병명 : ", disease[search_code])
             break    
         else:
             print("해당 질병을 가진 환자가 없습니다.")
